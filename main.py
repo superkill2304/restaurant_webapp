@@ -18,12 +18,12 @@ def user_registration():
 
     #storing data in array
     
-    data = (first_name,last_name,email,hashed_password,salt,"SHA256")
+    data = (first_name,last_name,email,hashed_password,salt)
     con = sqlite3.connect("main.db")
     cur = con.cursor()
 
-    cur.execute("""INSERT INTO users(first_name,last_name,email,password,salt,method)
-                    VALUES(?,?,?,?,?,?)
+    cur.execute("""INSERT INTO users(first_name,last_name,email,password,salt)
+                    VALUES(?,?,?,?,?)
                 
                 """,data)
     
@@ -80,5 +80,4 @@ def add_inventory():
     else: 
         return False
     
-
 add_inventory()
