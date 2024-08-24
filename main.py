@@ -56,7 +56,7 @@ def user_validation(input_email,input_password):
 
 def add_inventory():
     
-    if user_id := user_validation(input("Introduce Your email"),input("Introduce your password")):
+    if user_id := user_validation(input("Introduce Your email: "),input("Introduce your password: ")):
         
         category = input("Introduce the category")
         name = input("Introduce the name")
